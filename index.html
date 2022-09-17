@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台查询界面</title>
+    <!-- zui css -->
+    <link rel="stylesheet" href="dist/css/zui.min.css">
+    <link rel="stylesheet" href="dist/theme/blue.css">
+    <!-- app css -->
+    <link rel="stylesheet" href="css/app.css">
+    <!-- jquery js -->
+    <script src="dist/lib/jquery/jquery.js"></script>
+    
+</head>
+<body>
+	<nav class="navbar-inverse" role="navigation">
+	  <div class="container-fluid">
+	    <!-- 导航头部 -->
+	    <div class="navbar-header">
+	      <!-- 移动设备上的导航切换按钮 -->
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-example">
+	        <span class="sr-only">切换导航</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <!-- 品牌名称或logo -->
+	      <a class="navbar-brand" href="index.html">主页</a>
+	    </div>
+	    <!-- 导航项目 -->
+	    <div class="collapse navbar-collapse navbar-collapse-example">
+	      <!-- 一般导航项目 -->
+	      <ul class="nav navbar-nav ">
+	        <li class="active"><a href="index.html">项目</a></li>
+	        <li><a href="your/nice/url">需求</a></li>
+	        ...
+	        <!-- 导航中的下拉菜单 -->
+	        <li class="dropdown">
+	          <a href="your/nice/url" class="dropdown-toggle" data-toggle="dropdown">管理 <b class="caret"></b></a>
+	          <ul class="dropdown-menu" role="menu">
+	            <li><a href="your/nice/url">任务</a></li>
+	            ...
+	          </ul>
+	        </li>
+	      </ul>
+	    </div><!-- END .navbar-collapse -->
+	  </div>
+	</nav>
+    <nav class="menu" data-ride="menu" style="width: 200px">
+      <ul id="treeMenu" class="tree tree-menu" data-ride="tree">
+        <li class="active"><a href="#"><i class="icon icon-th"></i>首页</a></li>
+        <li><a href="#"><i class="icon icon-user"></i>个人资料</a></li>
+        <li><a href="#"><i class="icon icon-trash"></i>垃圾篓</a></li>
+        <li><a href="#"><i class="icon icon-list-ul"></i>全部</a></li>
+      </ul>
+    </nav>
+	
+	
+	
+	<!-- zui js -->
+    <script src="dist/js/zui.min.js"></script>
+    <!-- app js -->
+    <script src="js/app.js"></script>
+	<script>
+		// 手动通过点击模拟高亮菜单项
+		$('#treeMenu').on('click', 'a', function() {
+		    $('#treeMenu li.active').removeClass('active');
+		    $(this).closest('li').addClass('active');
+		});
+		// 使用 tree 实例
+var myTree = $('#tree').data('zui.tree');
+myTree.collapse(params);
+
+// 使用 tree() 方式
+$('#tree').tree('collapse', params)
+	</script>
+</body>
+</html>
