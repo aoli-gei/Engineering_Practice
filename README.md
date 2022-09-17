@@ -1,5 +1,11 @@
-# zui-admin
-zui后台管理模板!
+# FZU 2022 Engineering Practice
+
+基于 zui后台管理模板
+
+
+
+下文为原 README。
+
 目前页面及插件较少，会在后续开发中慢慢完善。
 
 
